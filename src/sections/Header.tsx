@@ -9,7 +9,7 @@ export const Header = () => {
           Projects
         </a>
         <a href="#" className="nav-item">
-          About
+          Experience
         </a>
         <a
           href="#"
@@ -19,5 +19,5 @@ export const Header = () => {
         </a>
       </nav>
     </div>
-  )
-}
+  );
+};
