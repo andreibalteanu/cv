@@ -10,10 +10,11 @@ export const HeroSection = () => {
           src={profileImage}
           alt="profile image"
         />
-        <div>
-          <div></div>
-          <div>Balteanu Andrei</div>
-        </div>
+        <h1>Balteanu Andrei</h1>
+        <p>
+          Specialized in developing responsive web applications and engaging
+          user interfaces using modern technologies.
+        </p>
       </div>
     </div>
   );
