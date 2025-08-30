@@ -1,6 +1,6 @@
 import gallaMaisonLandingPage from "@/assets/images/gallaMaisonLandingPage.png";
 import pokeworldLandingPage from "@/assets/images/pokeworldLandingPage.png";
-import jiraBoardLandingPage from "@/assets/images/jiraBoardLandingPage.png";
+// import jiraBoardLandingPage from "@/assets/images/jiraBoardLandingPage.png";
 import Image from "next/image";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
