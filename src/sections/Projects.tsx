@@ -23,12 +23,12 @@ const portfolioProjects = [
     link: "https://willowy-dodol-37adfd.netlify.app/",
     image: pokeworldLandingPage,
   },
-  {
-    title: "Jira Board",
-    results: [{ title: "HTML" }, { title: "CSS" }, { title: "Javascript" }],
-    link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
-    image: jiraBoardLandingPage,
-  },
+  // {
+  //   title: "Jira Board",
+  //   results: [{ title: "HTML" }, { title: "CSS" }, { title: "Javascript" }],
+  //   link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
+  //   image: jiraBoardLandingPage,
+  // },
 ];
 
 export const ProjectsSection = () => {
