@@ -1,46 +1,33 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import gallaMaisonLandingPage from "@/assets/images/gallaMaisonLandingPage.png";
+import pokeworldLandingPage from "@/assets/images/pokeworldLandingPage.png";
+import jiraBoardLandingPage from "@/assets/images/jiraBoardLandingPage.png";
 import Image from "next/image";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    title: "Galla Maison",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Astro" },
+      { title: "React" },
+      { title: "Typescript" },
+      { title: "Tailwind" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://rad-madeleine-23d7a3.netlify.app/",
+    image: gallaMaisonLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    title: "Pokeworld",
+    results: [{ title: "React" }],
+    link: "https://willowy-dodol-37adfd.netlify.app/",
+    image: pokeworldLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    title: "Jira Board",
+    results: [{ title: "HTML" }, { title: "CSS" }, { title: "Javascript" }],
+    link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
+    image: jiraBoardLandingPage,
   },
 ];
 
