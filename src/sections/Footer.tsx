@@ -1,3 +1,7 @@
 export const Footer = () => {
-  return <div>Footer Section</div>;
+  return (
+    <footer>
+      <div className="border-t border-white/15 py-6"></div>
+    </footer>
+  );
 };

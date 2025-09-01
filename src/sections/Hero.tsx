@@ -15,7 +15,7 @@ export const HeroSection = () => {
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Hello, i&apos;m Andrei!
           </h1>
-          <p className="mt-4 text-center text-white/60 md: text-lg">
+          <p className="mt-4 text-center text-white/60 md:text-lg">
             Specialized in developing responsive web applications and engaging
             user interfaces using modern technologies.
           </p>
