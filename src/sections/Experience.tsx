@@ -46,14 +46,14 @@ const workExperience = [
 
 export const ExperienceSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="experience" className="pb-16 lg:py-24">
       <div className="container">
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
           Work Experience
         </h2>
 
         <div className="relative mt-10 md:mt-20">
-          <div className="absolute left-3 top-3 bottom-3 w-px bg-white/15" />
+          <div className="absolute left-3 top-3 bottom-0 w-px bg-white/15" />
 
           <ul className="space-y-14">
             {workExperience.map((experience) => (

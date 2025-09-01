@@ -4,7 +4,7 @@ import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-36 md:py-48 lg:py-56">
+    <div id="home" className="py-36 md:py-48 lg:py-56">
       <div className="container flex flex-col items-center">
         <Image
           className="rounded-full size-[150px]"
