@@ -46,7 +46,7 @@ const workExperience = [
 
 export const ExperienceSection = () => {
   return (
-    <section id="experience" className="pb-16 lg:py-24">
+    <section id="experience" className="py-20 lg:py-24">
       <div className="container">
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
           Work Experience
