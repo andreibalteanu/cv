@@ -28,7 +28,9 @@ export const ContactSection = () => {
           Contact
         </h2>
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10  rounded-3xl text-center max-w-lg mx-auto md:text-left">
-          <h2 className="font-serif text-2xl text-center mb-6">Hit me up!</h2>
+          <h2 className="font-semibold text-2xl text-center mb-8">
+            Hit me up!
+          </h2>
           <div className="flex flex-col items-center gap-4">
             {contactData.map((item) =>
               item.label === "Call" ? (

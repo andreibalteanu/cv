@@ -1,9 +1,17 @@
 import gallaMaisonLandingPage from "@/assets/images/gallaMaisonLandingPage.png";
 import pokeworldLandingPage from "@/assets/images/pokeworldLandingPage.png";
-// import jiraBoardLandingPage from "@/assets/images/jiraBoardLandingPage.png";
+import jiraBoardLandingPage from "@/assets/images/jiraBoardLandingPage.png";
+import dashboardLandingPage from "@/assets/images/dashboardLandingPage.png";
 import Image from "next/image";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import ReactIcon from "@/assets/icons/react.svg";
+import TsIcon from "@/assets/icons/typescript.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+import AstroIcon from "@/assets/icons/astro.svg";
+import HtmlIcon from "@/assets/icons/html.svg";
+import CssIcon from "@/assets/icons/css.svg";
+import JsIcon from "@/assets/icons/javascript.svg";
 
 const portfolioProjects = [
   {
@@ -23,13 +31,39 @@ const portfolioProjects = [
     link: "https://willowy-dodol-37adfd.netlify.app/",
     image: pokeworldLandingPage,
   },
-  // {
-  //   title: "Jira Board",
-  //   results: [{ title: "HTML" }, { title: "CSS" }, { title: "Javascript" }],
-  //   link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
-  //   image: jiraBoardLandingPage,
-  // },
+  {
+    title: "Dashboard",
+    results: [{ title: "React" }],
+    link: "https://master--leafy-lolly-6336ba.netlify.app/",
+    image: dashboardLandingPage,
+  },
+  {
+    title: "Jira Board",
+    results: [{ title: "HTML" }, { title: "CSS" }, { title: "Vanilla JS" }],
+    link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
+    image: jiraBoardLandingPage,
+  },
 ];
+
+const techIcons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
+  React: ReactIcon,
+  Typescript: TsIcon,
+  Tailwind: TailwindIcon,
+  Astro: AstroIcon,
+  HTML: HtmlIcon,
+  CSS: CssIcon,
+  "Vanilla JS": JsIcon,
+};
+
+const techStyles: Record<string, string> = {
+  Astro: "bg-[#1e1a2e] text-[#f7c8ff]",
+  React: "bg-[#0B2447] text-[#61DBFB]",
+  Typescript: "bg-[#1a2d4b] text-[#3178c6]",
+  Tailwind: "bg-[#0f172a] text-[#38bdf8]",
+  HTML: "bg-[#3b0d0c] text-[#e34c26]",
+  CSS: "bg-[#0c213b] text-[#264de4]",
+  "Vanilla JS": "bg-[#3b3a0c] text-[#f7df1e]",
+};
 
 export const ProjectsSection = () => {
   return (
@@ -56,15 +90,25 @@ export const ProjectsSection = () => {
                     {project.title}
                   </h3>
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results.map((result) => (
-                      <li
-                        className="flex text-sm md:text-base text-white/50 ml-2"
-                        key={result.title}
-                      >
-                        {result.title}
-                      </li>
-                    ))}
+                  <ul className="flex flex-wrap gap-3 mt-4 md:mt-5">
+                    {project.results.map((result) => {
+                      const Icon = techIcons[result.title];
+                      return (
+                        <li key={result.title}>
+                          <span
+                            className={[
+                              "inline-flex items-center rounded-full px-4 py-1.5 gap-2",
+                              "text-sm font-medium ring-1 ring-white/10",
+                              techStyles[result.title] ??
+                                "bg-white/10 text-white/80",
+                            ].join(" ")}
+                          >
+                            {Icon && <Icon className="w-4 h-4" />}
+                            {result.title}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                   <a href={project.link} className="z-10 relative">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
