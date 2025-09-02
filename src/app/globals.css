@@ -14,6 +14,10 @@ html {
   .nav-item-active {
     @apply bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900;
   }
+
+  .contact-button {
+    @apply text-white bg-gray-900 inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-40;
+  }
 }
 
 @layer utilities {
