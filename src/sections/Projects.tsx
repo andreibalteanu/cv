@@ -28,19 +28,19 @@ const portfolioProjects = [
   {
     title: "Pokeworld",
     results: [{ title: "React" }],
-    link: "https://willowy-dodol-37adfd.netlify.app/",
+    link: "",
     image: pokeworldLandingPage,
   },
   {
     title: "Dashboard",
     results: [{ title: "React" }],
-    link: "https://master--leafy-lolly-6336ba.netlify.app/",
+    link: "",
     image: dashboardLandingPage,
   },
   {
     title: "Jira Board",
     results: [{ title: "HTML" }, { title: "CSS" }, { title: "Vanilla JS" }],
-    link: "https://codepen.io/andrei-balteanu/pen/BapdbOJ",
+    link: "",
     image: jiraBoardLandingPage,
   },
 ];
