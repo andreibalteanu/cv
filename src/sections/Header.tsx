@@ -7,8 +7,8 @@ type HeaderProps = {
 
 const SECTIONS = [
   { id: "home", label: "Home" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
 

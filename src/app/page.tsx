@@ -15,8 +15,8 @@ export default function Home() {
     <div>
       <Header active={activeSection} setActive={setActiveSection} />
       <HeroSection setActive={setActiveSection} />
-      <ExperienceSection />
       <ProjectsSection />
+      <ExperienceSection />
       <ContactSection />
       <Footer />
     </div>

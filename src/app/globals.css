@@ -16,7 +16,7 @@ html {
   }
 
   .contact-button {
-    @apply text-white bg-gray-900 inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-40;
+    @apply text-white bg-gray-900 inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-auto;
   }
 }
 

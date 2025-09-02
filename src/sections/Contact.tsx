@@ -1,3 +1,4 @@
+"use client";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { useState } from "react";
 
@@ -11,13 +12,20 @@ const contactData = [
 ];
 
 export const ContactSection = () => {
-  const [showNumber, setShowNumber] = useState(false);
-  const phoneNumber = "+40756537145";
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
 
-  const handleCallClick = (e: React.MouseEvent) => {
-    if (!showNumber) {
+  const REVEAL_TEXT: Record<string, string> = {
+    Call: "+40756537145",
+    Mail: "balteanu_andrei98@yahoo.com",
+  };
+
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    label: string
+  ) => {
+    if (label in REVEAL_TEXT && !revealed[label]) {
       e.preventDefault();
-      setShowNumber(true);
+      setRevealed((r) => ({ ...r, [label]: true }));
     }
   };
 
@@ -27,30 +35,31 @@ export const ContactSection = () => {
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 mb-10 md:mb-20">
           Contact
         </h2>
-        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10  rounded-3xl text-center max-w-lg mx-auto md:text-left">
+        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center max-w-lg mx-auto md:text-left">
           <h2 className="font-semibold text-2xl text-center mb-8">
             Hit me up!
           </h2>
+
           <div className="flex flex-col items-center gap-4">
-            {contactData.map((item) =>
-              item.label === "Call" ? (
-                <a key={item.label} href={item.link} onClick={handleCallClick}>
-                  <button className="contact-button">
+            {contactData.map(({ label, link }) => {
+              const show = revealed[label] && REVEAL_TEXT[label];
+              return (
+                <a
+                  key={label}
+                  href={link}
+                  onClick={(e) => handleClick(e, label)}
+                  rel={label === "LinkedIn" ? "noopener noreferrer" : undefined}
+                  target={label === "LinkedIn" ? "_blank" : undefined}
+                >
+                  <button className="contact-button" type="button">
                     <span className="font-semibold">
-                      {showNumber ? phoneNumber : "Call"}
+                      {show ? REVEAL_TEXT[label] : label}
                     </span>
                     <ArrowUpRightIcon className="size-4" />
                   </button>
                 </a>
-              ) : (
-                <a key={item.label} href={item.link}>
-                  <button className="contact-button">
-                    <span className="font-semibold">{item.label}</span>
-                    <ArrowUpRightIcon className="size-4" />
-                  </button>
-                </a>
-              )
-            )}
+              );
+            })}
           </div>
         </div>
       </div>

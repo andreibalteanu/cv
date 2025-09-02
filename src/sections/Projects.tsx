@@ -28,7 +28,7 @@ const portfolioProjects = [
   {
     title: "Pokeworld",
     results: [{ title: "React" }],
-    link: "",
+    link: "https://willowy-dodol-37adfd.netlify.app/",
     image: pokeworldLandingPage,
   },
   {
